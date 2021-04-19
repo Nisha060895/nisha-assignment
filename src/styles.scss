@@ -13,13 +13,23 @@
 
 .computed-box {
     height: 60px;
-    width: 60px;
+    width: auto;
     background-color: blue;
     color: pink;
     font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// Problem three ----------------------------
+
+.problem-three-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 1px solid gray;
 }
 
 // Problem four ----------------------------
