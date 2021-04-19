@@ -42,10 +42,7 @@ export class ProblemThreeComponent implements OnInit {
         let index = this.phoneNumbersControls.findIndex(y => y.controlName == control.controlName);
         if (index > 0) {
             this.phoneNumbersControls.splice(index, 1);
-            this.phoneNumbersControls.forEach(x => {
-                this.phoneNumberForm.addControl(x.controlName, this.fb.control(''));
-            })
-            this.phoneNumberForm.reset();
+            this.phoneNumberForm.removeControl(control.controlName);
         }
     }
 
