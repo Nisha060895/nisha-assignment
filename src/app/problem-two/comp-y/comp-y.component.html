@@ -1,0 +1,7 @@
+<form class="form-group m-3 p-2" [formGroup]="yCompDataForm" style="border: 1px solid red;" *ngIf="yCompData">
+    <div class="panel panel-primary y-panel-style">
+        {{yCompData.displayName}}
+        <input type="text" class="form-control" [formControlName]="yCompData.controlName" />
+        <button class="btn btn-primary m-1" (click)="changeYCompTabName(yCompData)">Save Y Tab Name</button>
+    </div>
+</form>

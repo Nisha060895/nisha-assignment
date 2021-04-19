@@ -3,13 +3,23 @@
 </h3>
 <div class="d-flex align-items-center justify-content-center p-4">
     <div class="problem-two-container">
-        <button class="btn btn-primary" (click)="addX()">Add X Panel</button>
+        <button class="btn btn-primary" (click)="addXPanel()">Add X Panel</button>
+        <button class="btn btn-primary ml-3 " (click)="displayDataInConsole()" [disabled]="xPanelData?.length == 0">View
+            Data</button>
     </div>
 </div>
-<div *ngFor="let xComp of xData">
-    <div class="panel panel-primary panel-style m-3 p-2 ">
-        {{xComp.name}}
-        <input type="text" class="form-control"/>
-        <button class="btn btn-primary m-1" (click)="changeTabName()">Save</button>
+<form class="form-group" [formGroup]="xPanelDataForm">
+    <div *ngFor="let xCompData of xPanelData">
+        <div class="panel panel-primary panel-style m-3 p-2 ">
+            {{xCompData.displayName}}
+            <input type="text" class="form-control" [formControlName]="xCompData.controlName" />
+            <button class="btn btn-primary m-1" (click)="changeTabName(xCompData)">Save X Tab Name</button>
+            <button class="btn btn-primary m-1 ml-3" (click)="addYComponent(xCompData)">+ Add Y Component</button>
+            <ng-container *ngIf="xCompData['yCompData']?.length > 0">
+                <div *ngFor="let y of xCompData['yCompData']">
+                    <app-comp-y [yCompData]="y"></app-comp-y>
+                </div>
+            </ng-container>
+        </div>
     </div>
-</div>
+</form>

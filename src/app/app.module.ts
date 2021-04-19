@@ -14,6 +14,7 @@ import { CornerThreeComponent } from './problem-four/corner-three/corner-three.c
 import { CornerTwoComponent } from './problem-four/corner-two/corner-two.component';
 import { CornerOneComponent } from './problem-four/corner-one/corner-one.component';
 import { CenterOneComponent } from './problem-four/center-one/center-one.component';
+import { CompYComponent } from './problem-two/comp-y/comp-y.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CenterOneComponent } from './problem-four/center-one/center-one.compone
     CornerThreeComponent,
     CornerTwoComponent,
     CornerOneComponent,
-    CenterOneComponent
+    CenterOneComponent,
+    CompYComponent
   ],
   imports: [
     BrowserModule,
