@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Problem four ----------------------------
+
+.problem-four-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 1px solid gray;
+}
+.corner {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}

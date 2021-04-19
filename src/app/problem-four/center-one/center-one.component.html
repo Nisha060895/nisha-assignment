@@ -1,0 +1,4 @@
+<div class="p-2">
+    <input class="form-control" [ngModel]="textFromCentral" [ngModelOptions]="{standalone: true}" type="text" 
+    (ngModelChange)="textChanged(textValue.value)" #textValue placeholder="Please enter text"/>
+</div>
