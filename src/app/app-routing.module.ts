@@ -11,7 +11,7 @@ import { ProblemTwoComponent } from './problem-two/problem-two.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'problem-one',
     pathMatch: 'full'
   },
   {
