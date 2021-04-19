@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProblemTwoComponent implements OnInit {
 
+  public xData: any[] = [];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addX() {
+    this.xData.push({ 'name': `x${this.xData.length + 1}` });
   }
 
 }
