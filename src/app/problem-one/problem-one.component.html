@@ -1,1 +1,26 @@
-<p>problem-one works!</p>
+<h3 class="text-center mt-2">
+    <strong>Solution-1:</strong>
+</h3>
+<div class="problem-one-container p-4">
+    <div class="d-flex align-items-center justify-content-around w-100">
+        <div>
+            <b>Series Index: </b>
+            <input class="ml-2 form-control" [ngModel]="indexFromUser"
+                [ngModelOptions]="{standalone: true}" type="number" min="0" max="100"
+                (ngModelChange)="indexChanged(indexValue.value)" #indexValue placeholder="Please enter index"
+                style="width: 300px" />
+        </div>
+        <button type="btn btn-primary ml-3" (click)="findValue()">
+            Get Value
+        </button>
+    </div>
+    <div class="d-flex my-3 align-items-center">
+        <strong class="mr-2">Computed Value:</strong>
+        <div class="computed-box" *ngIf="computedValue > 0 else novalue">
+            {{computedValue}}
+        </div>
+        <ng-template #novalue>
+            No value
+        </ng-template>
+    </div>
+</div>

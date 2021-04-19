@@ -1,5 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Problem One-------------------------------
+
+.problem-one-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.computed-box {
+    height: 60px;
+    width: 60px;
+    background-color: blue;
+    color: pink;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // Problem four ----------------------------
 
 .problem-four-container {
